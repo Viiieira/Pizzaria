@@ -1,55 +1,140 @@
+:root {
+    --primary-clr-900: #141414;
+    --primary-clr-800: #383838;
+    --secondary-clr: #eece00;
+
+    --title-color: #ffffff;
+    --text-color: #f1f1f1;
+}
+
+/* Link Import Fonte de Letra */
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
 /* css reset */
-
-*, *::before, *::after { box-sizing: border-box; }
-
-* { margin: 0; }
-
-html, body { height: 100%; }
+/*
+  2. Remover a margem por defeito do browser.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Source Serif Pro", serif;
+}
 
 body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
-
-img, picture, video, canvas, svg {
+/*
+    6. Melhorar largura das imagens por defeito
+  */
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
 }
+/*
+    7. Remover estilização de tipo de letra em inputs, buttons, etc
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*
+    8. Evitar sobreposição de textos
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
 
-input, button, textarea, select { font: inherit; }
-
-p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
-
-h1, h2, h3, h4, h5, h6 { line-height: 1.1 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.1;
+}
 /* end css reset */
 
 /* general styling */
-body[data-theme="dark"] {
-    --primary-clr: #1c1c1c;
-    --text-color: #f5f3ed;
-}
-
-body[data-theme="light"] {
-    --primary-clr: #f5f3ed;
-    --text-color: #1c1c1c;
-}
-
-* {
-    font-family: "Poppins", sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--primary-clr);
-    color: var(--text-color);
-    font-weight: 400;
-    transition: all 0.5s ease;
+    font-size: 1.125rem;
 }
-
-nav, main, footer { padding-inline: 1rem; }
 /* end general styling */
 
 /* utilitary classes */
-.container {
-    max-width: 1200px;
+.sombra {
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+/* welcome */
+#welcome {
+    /* background */
+    background-image: url("../images/background2.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background: linear-gradient(
+            180deg,
+            rgba(56, 56, 56, 0.25) 0%,
+            rgba(56, 56, 56, 0.5) 80%,
+            rgba(0, 0, 0, 1) 100%
+        ),
+        url("../images/background2.jpg");
+
+    display: grid;
+    place-items: center;
+}
+
+.welcome-content {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+}
+
+#welcome img {
+    width: 30vw;
+}
+
+/* navbar */
+nav {
+    /* position: fixed; */
+}
+
+/* sobre nos */
+#sobrenos {
+    background-color: var(--primary-clr-900);
+    text-color: var(--text-color);
+}
+
+/* restaurantes */
+#restaurantes img {
+    filter: saturate(0);
+    transition: filter 0.25s ease-in-out;
+}
+
+#restaurantes img:hover {
+    filter: saturate(1);
+}
+
+/* footer */
+footer {
+    background-color: var(--primary-clr-800);
+    color: var(--text-color);
+    text-align: center;
+    padding: 0.5rem;
 }
