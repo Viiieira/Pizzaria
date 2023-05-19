@@ -1,0 +1,55 @@
+/* css reset */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html, body { height: 100%; }
+
+body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select { font: inherit; }
+
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.1 }
+
+/* end css reset */
+
+/* general styling */
+body[data-theme="dark"] {
+    --primary-clr: #1c1c1c;
+    --text-color: #f5f3ed;
+}
+
+body[data-theme="light"] {
+    --primary-clr: #f5f3ed;
+    --text-color: #1c1c1c;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--primary-clr);
+    color: var(--text-color);
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+nav, main, footer { padding-inline: 1rem; }
+/* end general styling */
+
+/* utilitary classes */
+.container {
+    max-width: 1200px;
+}
