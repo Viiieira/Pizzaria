@@ -36,54 +36,29 @@ body {
 /*
     6. Melhorar largura das imagens por defeito
   */
-img,
-picture,
-video,
-canvas,
-svg {
+img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
 }
 /*
     7. Remover estilização de tipo de letra em inputs, buttons, etc
   */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
+input, button, textarea, select { font: inherit }
 /*
     8. Evitar sobreposição de textos
   */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    line-height: 1.1;
-}
+h1, h2, h3, h4, h5, h6 { line-height: 1.1 }
 /* end css reset */
 
 /* Estilos Gerais */
 html { scroll-behavior: smooth; }
 
-body { font-size: 1.125rem; /* 1 rem = 16px, 1.125rem = 18px */ }
+/* 1 rem = 16px, 1.125rem = 18px */
+body { font-size: 1.125rem; }
 
-@media (max-width: 425px) {
-    body { font-size: 1rem; }
-}
+@media (max-width: 425px) { body { font-size: 1rem } }
 
 h1 { font-size: 2.25rem; }
 
@@ -111,8 +86,9 @@ a {
 a:hover,
 a:focus { text-decoration: underline; }
 
-ul { padding-left: 0; }
-li { list-style: none; }
+ul { padding-left: 0 }
+li { list-style: none }
+textarea { resize: none }
 
 /* end general styling */
 
@@ -126,26 +102,22 @@ li { list-style: none; }
 .container {
     max-width: 60%;
     margin-inline: auto;
-    padding-block: 2rem;
+    padding: 2rem;
     border-radius: 1rem;
 }
 
-section { margin-bottom: 5rem; }
+/* Ajustar o largura máxima do container, para melhor visualização em ecrãs pequenos */
+@media (max-width: 768px) { .container { max-width: 90% } }
+@media (max-width: 425px) { .container { max-width: 100% } }
+
+section { margin-bottom: 5rem }
+section:last-of-type { margin-bottom: 0 }
 
 section h1 {
     margin-bottom: 3rem;
 }
 
 .text-colored { color: var(--accent-clr-900); }
-
-/* Ajustar o largura máxima do container, para melhor visualização em ecrãs pequenos */
-@media (max-width: 768px) {
-    .container { max-width: 90%; }
-}
-
-@media (max-width: 425px) {
-    .container { max-width: 100%; border-radius: none; }
-}
 
 .btn {
     background-color: var(--accent-clr-900);
@@ -178,9 +150,9 @@ section h1 {
     .input-field {
         width: 100%; /* Assegura que cada item ocupa todo o espaço disponível */
     }
-  }
+}
 
-  .form-submit {
+.form-submit {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -216,8 +188,32 @@ section h1 {
 
 /* Barra de navegação */
 nav {
-    /* position: fixed; */
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: var(--primary-clr-900);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.75) 25%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.25) 75%,
+        rgba(0, 0, 0, 0) 100%
+    )
 }
+
+.logo {
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.logo:hover, .logo:focus { text-decoration: none; }
+
+nav ul { display: flex; flex-direction: row; gap: 1rem; font-weight: 500; }
 
 /* sobre nos */
 #sobrenos {
@@ -235,22 +231,34 @@ nav {
     filter: saturate(1);
 }
 
+/* reservas */
+#reservas {
+    margin-top: 5rem;
+    background-color: var(--primary-clr-800);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#reservas h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 /* footer */
 footer {
     background-color: var(--primary-clr-800);
     color: var(--text-color);
     text-align: center;
-    padding: 0.5rem;
+    padding: 1.5rem;
 }
 
 .footer-social-media {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 3rem;
 }
-
-@media (max-width: 425px) { .footer-social-media { flex-direction: column; align-items: center; } }
 
 .social-media {
     width: 60px;
@@ -288,11 +296,3 @@ footer {
 .social-media:hover::after { top: 0 }
 .social-media:hover .fa-brands { color: var(--title-color) }
 .social-media:hover { transform: translateY(-10px) }
-
-/* reservas */
-#reservas {
-    background-color: var(--primary-clr-800);
-    padding: 2rem;
-}
-
-#reservas h1 { margin-bottom: 3rem; text-align: center; }
