@@ -47,7 +47,7 @@
     <body>
         <nav>
             <a class="logo" href="index.html#welcome">
-                Vicenzo
+                DiVicenzo
             </a>
             <ul>
                 <li><a href="index.html#welcome">Home</a></li>
@@ -111,8 +111,15 @@
 
             <section id="menu">
                 <h1>Menu</h1>
-                <p>Pretender ver o nosso menu? Aqui vai</p>
-                <button type="button" class="sombra">Download me</button>
+                <!-- <p>Pretender ver o nosso menu? Aqui vai</p> -->
+                <button type="button" class="btn-download sombra rounded" onclick="openPDF()">
+                    <div class="button-text">
+                        Download
+                    </div>
+                    <div class="button-icon">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+                </button>
             </section>
         </main>
 
@@ -153,5 +160,8 @@
 
             Rita Vieira & Rodrigo Coelho &copy; 2023
         </footer>
+
+        <!-- Scripts -->
+        <script src="./assets/scripts/main.js"></script>
     </body>
 </html>
