@@ -21,41 +21,65 @@
             </ul>
         </nav>
 
-        <main>
-            <section id="reservas">
+        <main class="container">
+            <section id="reservas" class="rounded">
                 <h1>Reservas</h1>
-                <form action="">
-                    <div class="input-field"><label for=""></label>
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
+                <form action="index.html" autocomplete="off" method="post">
+                    <div class="input-field">
+                        <label for="restaurant">
+                            Restaurante 
+                            <span class="text-colored">*</span>
+                        </label>
+                        <select name="restaurant">
+                            <option value="1">Lorem.</option>
+                            <option value="2">Lorem.</option>
+                            <option value="3">Lorem.</option>
+                            <option value="4">Lorem.</option>
                         </select>
                     </div>
-                    <div class="input-field">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" />
-                    </div>
-                    <div class="input-field">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" />
-                    </div>
-                    <div class="input-field">
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone" />
-                    </div>
-                    <div class="input-field">
-                        <label for="data">Data</label>
-                        <input type="date" name="data" id="data" />
-                    </div>
-                    <div class="input-field">
-                        <label for="hora">Hora</label>
-                        <input type="time" name="hora" id="hora" />
-                    </div>
-                    <div class="input-field">
-                        <label for="pessoas">Pessoas</label>
-                        <input type="number" name="pessoas" id="pessoas" />
+                    <div class="input-grid">
+                        <div class="input-field">
+                            <label for="nome">
+                                Nome Completo 
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="text" name="nome" id="nome" placeholder="John Doe" required autofocus />
+                        </div>
+                        <div class="input-field">
+                            <label for="data">
+                                Data
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="date" name="data" id="data" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="email">
+                                E-mail
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="hora">
+                                Hora
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="time" name="hora" id="hora" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="telefone">
+                                Telefone
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="tel" name="telefone" id="telefone" placeholder="+351 123 456 789" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="pessoas">
+                                Pessoa(s)
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="number" name="pessoas" id="pessoas" placeholder="1" min="1" max="10" required />
+                        </div>
                     </div>
                     <div class="input-field">
                         <label for="observacoes">Observações</label>
@@ -66,7 +90,10 @@
                             rows="10"
                         ></textarea>
                     </div>
-                    <button type="submit">Enviar</button>
+                    <div class="form-submit">
+                        <button type="reset" class="btn rounded">Limpar</button>
+                        <button type="submit" class="btn rounded">Reservar</button>
+                    </div>
                 </form>
             </section>
         </main>

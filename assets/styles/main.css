@@ -1,28 +1,37 @@
-:root {
-    --primary-clr-900: #141414;
-    --primary-clr-800: #383838;
-    --secondary-clr: #eece00;
+/* Link Import Fonte de Letra */
+/* Source Serif Pro */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
+/* Variáveis CSS */
+:root {
+    /* Cores Principais */
+    --primary-clr-900: rgb(20, 20, 20);
+    --primary-clr-800: rgb(30, 30, 30);
+    --accent-clr-900: rgb(225, 225, 0);
+    --accent-clr-800: rgb(238, 200, 0);
+
+    /* Cores Textos e Títulos */
     --title-color: #ffffff;
     --text-color: #f1f1f1;
 }
 
-/* Link Import Fonte de Letra */
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
-
-/* css reset */
+/* CSS Reset (tirar estilos por defeito do browser para algumas tags) */
 /*
   2. Remover a margem por defeito do browser.
 */
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: "Source Serif Pro", serif;
+    font-family: "Lora", serif;
+    outline: none;
 }
 
 body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--primary-clr-900);
+    color: var(--text-color);
 }
 /*
     6. Melhorar largura das imagens por defeito
@@ -67,27 +76,96 @@ h6 {
 }
 /* end css reset */
 
-/* general styling */
-html {
-    scroll-behavior: smooth;
+/* Estilos Gerais */
+html { scroll-behavior: smooth; }
+
+body { font-size: 1.125rem; /* 1 rem = 16px, 1.125rem = 18px */ }
+
+h1 { font-size: 2.25rem; }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-body {
-    font-size: 1.125rem;
+form input,
+form select,
+form textarea {
+    width: 100%;
+    border-radius: .75rem;
+    padding: .75rem 1.25rem;
+    margin-top: 0.625rem;
+    background-color: rbga(0,0,0,.25);
 }
+
+.form-submit {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* end general styling */
 
-/* utilitary classes */
-.sombra {
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+/* Classes Utilitárias */
+
+/* TODO: ARRANJAR CLASSE PARA A SOMBRA */
+.sombra { box-shadow: 0 10px 50px rgba(0, 0, 0, 0.75) }
+
+.rounded { border-radius:1rem}
+
+.container {
+    max-width: 60%;
+    margin-inline: auto;
+    padding-block: 2rem;
 }
-/* welcome */
+
+.text-colored { color: var(--accent-clr-900); }
+
+/* Ajustar o largura máxima do container, para melhor visualização em ecrãs pequenos */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+.btn {
+    background-color: var(--accent-clr-900);
+    color: var(--primary-clr-900);
+    border: 3px solid transparent;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+    border-color: var(--primary-clr-800);
+    background-color: var(--accent-clr-800);
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-field {
+        width: 100%; /* Assegura que cada item ocupa todo o espaço disponível */
+    }
+  }
+
+/* Primeira secção */
 #welcome {
     /* background */
-    background-image: url("../images/background2.jpg");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     background: linear-gradient(
             180deg,
@@ -96,7 +174,9 @@ body {
             rgba(0, 0, 0, 1) 100%
         ),
         url("../images/background2.jpg");
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: grid;
     place-items: center;
 }
@@ -110,7 +190,7 @@ body {
     width: 30vw;
 }
 
-/* navbar */
+/* Barra de navegação */
 nav {
     /* position: fixed; */
 }
@@ -138,3 +218,11 @@ footer {
     text-align: center;
     padding: 0.5rem;
 }
+
+/* reservas */
+#reservas {
+    background-color: var(--primary-clr-800);
+    padding: 2rem;
+}
+
+#reservas h1 { margin-bottom: 3rem; text-align: center; }
