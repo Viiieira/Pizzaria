@@ -100,7 +100,7 @@ textarea { resize: none }
 .rounded { border-radius:1rem}
 
 .container {
-    max-width: 60%;
+    max-width: 70%;
     margin-inline: auto;
     padding: 2rem;
     border-radius: 1rem;
@@ -202,7 +202,7 @@ nav {
         rgba(0, 0, 0, 0.5) 50%,
         rgba(0, 0, 0, 0.25) 75%,
         rgba(0, 0, 0, 0) 100%
-    )
+    );
 }
 
 .logo {
@@ -249,8 +249,13 @@ nav ul { display: flex; flex-direction: row; gap: 1rem; font-weight: 500; }
 footer {
     background-color: var(--primary-clr-800);
     color: var(--text-color);
-    text-align: center;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-social-media {
@@ -298,7 +303,53 @@ footer {
 .social-media:hover .fa-brands { color: var(--title-color) }
 .social-media:hover { transform: translateY(-10px) }
 
+.footer-inline-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* Menu */
+.menu-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-block: 3rem;
+}
+
+.menu-card {
+    padding: 1.5rem;
+    width: 275px;
+    height: 500px;
+    object-fit: cover;
+    filter: saturate(1);
+    background-position: center center;
+}
+
+.menu-card:first-child { background-image: url('../images/restaurante1.avif') }
+.menu-card:nth-child(2) { background-image: url('../images/restaurante-2.jpg') }
+.menu-card:nth-child(3) { background-image: url('../images/restaurante-3.jpg') }
+.menu-card:last-child { background-image: url('../images/restaurante-4.jpg') }
+
+.menu-card p { opacity: 0; }
+
+.menu-card:hover {
+    transform: scale(1.05);
+    filter: saturate(0);
+    transition: filter 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+}
+
+.menu-card:hover p {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+    font-size: 1.75rem;
+    /* font-weight: bold; */
+    font-style: italic;
+}
+
 .btn-download {
     display: flex;
     padding: .5rem 1.5rem;
