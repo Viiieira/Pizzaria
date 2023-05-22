@@ -42,8 +42,59 @@
         </ul>
     </nav>
 
-    <main>
-        <h1>oi :)</h1>
+    <main class="container">
+        <section id="evoucher">
+            <h1>e-Voucher</h1>
+            <form action="index.html" autocomplete="off" method="post">
+                <div class="input-field">
+                    <label for="nome">
+                        Nome
+                        <span class="text-colored">*</span>
+                    </label>
+                    <input type="text" name="nome" id="nome" placeholder="John Doe" required autofocus />
+                    <label for="telefone">
+                        Telefone
+                    </label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="+351 987 654 321" required />
+                    <label for="email">
+                        E-mail
+                        <span class="text-colored">*</span>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
+                    <label for="oferta">
+                        <input type="checkbox" id="oferta1" name="oferta1">
+                        <label for="oferta1">Para mim</label><br>
+                        <input type="checkbox" id="oferta2" name="oferta2">
+                        <label for="oferta2">Para oferecer</label><br>
+                    </label>
+                    <label for="nome-dest">
+                        Nome do destinatário
+                        <span class="text-colored">*</span>
+                    </label>
+                    <input type="text" name="nome-dest" id="nome-dest" placeholder="John Doe" required />
+                </div>
+                <div>
+                    <label for="quantia">
+                        Quantia
+                    </label>
+                    <button type="radio" id="10euros" name="quantia" class="btn-quantia rounded">10€</button>
+                    <button type="radio" id="20euros" name="quantia" class="btn-quantia rounded">20€</button>
+                    <button type="radio" id="30euros" name="quantia" class="btn-quantia rounded">30€</button>
+                    <button type="radio" id="40euros" name="quantia" class="btn-quantia rounded">40€</button>
+                    <button type="radio" id="50euros" name="quantia" class="btn-quantia rounded">50€</button>
+                    <button type="radio" id="60euros" name="quantia" class="btn-quantia rounded">60€</button>
+                    <button type="radio" id="80euros" name="quantia" class="btn-quantia rounded">80€</button>
+                    <button type="radio" id="100euros" name="quantia" class="btn-quantia rounded">100€</button>
+                    <button type="radio" id="150euros" name="quantia" class="btn-quantia rounded">150€</button>
+                    <button type="radio" id="200euros" name="quantia" class="btn-quantia rounded">200€</button>
+                </div>
+                <div class="form-creat">
+                    <button type="reset" class="btn rounded sombra">Limpar</button>
+                    <button type="submit" class="btn rounded sombra">Criar e-voucher</button>
+                </div>
+            </form>
+        </section>
+
     </main>
 
     <footer>
@@ -79,9 +130,7 @@
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
         </div>
-        <div class="foooter-author-rights container"></div>
-
-        <!-- Rita Vieira & Rodrigo Coelho &copy; 2023 -->
+        <div class="foooter-author-rights container">&copy; 2023 VICENZO Rita Vieira & Rodrigo Coelho </div>
     </footer>
 </body>
 

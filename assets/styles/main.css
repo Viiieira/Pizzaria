@@ -159,12 +159,6 @@ textarea {
 }
 
 /* Ajustar o largura máxima do container, para melhor visualização em ecrãs pequenos */
-@media (max-width: 768px) {
-    .container {
-        max-width: 90%
-    }
-}
-
 @media (max-width: 425px) {
     .container {
         max-width: 100%
@@ -225,6 +219,13 @@ section h1 {
 }
 
 .form-submit {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-creat {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -485,7 +486,34 @@ nav ul {
     text-align: center;
 }
 
+
+.option-rest {
+    width: auto;
+}
+
 /* evoucher */
+#evoucher {
+    margin-top: 5rem;
+    background-color: var(--primary-clr-800);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#evoucher h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.btn-quantia {
+    background-color: var(--primary-clr-800);
+    color: var(--accent-clr-800);
+    padding: .5rem .75rem;
+    margin: 0 auto;
+    border: 2px solid var(--accent-clr-800);
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
 
 /* footer */
 footer {
