@@ -138,6 +138,20 @@ textarea {
     resize: none
 }
 
+section {
+    margin-bottom: 5rem;
+    scroll-margin-top: 5rem;
+}
+
+section:last-of-type {
+    margin-bottom: 0
+}
+
+section h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-style: italic;
+}
 /* end general styling */
 
 /* Classes Utilitárias */
@@ -152,7 +166,7 @@ textarea {
 }
 
 .container {
-    max-width: 90%;
+    max-width: 75%;
     margin-inline: auto;
     padding: 2rem;
     border-radius: 1rem;
@@ -163,21 +177,6 @@ textarea {
     .container {
         max-width: 100%
     }
-}
-
-section {
-    margin-bottom: 5rem;
-    scroll-margin-top: 5rem;
-}
-
-section:last-of-type {
-    margin-bottom: 0
-}
-
-section h1 {
-    margin-bottom: 3rem;
-    text-align: center;
-    font-style: italic;
 }
 
 .text-colored {
@@ -200,6 +199,18 @@ section h1 {
     background-color: var(--accent-clr-800);
 }
 
+.flex-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.flex-wrap-child {
+    flex: 1 1 300px;
+}
+
 .input-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -211,11 +222,10 @@ section h1 {
     .input-grid {
         grid-template-columns: 1fr;
     }
+}
 
-    .input-field {
-        width: 100%;
-        /* Assegura que cada item ocupa todo o espaço disponível */
-    }
+.input-field {
+    width: 100%;
 }
 
 .form-submit {
@@ -225,7 +235,7 @@ section h1 {
     gap: 1rem;
 }
 
-.form-creat {
+.form-create {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -400,11 +410,6 @@ nav ul {
 
 /* Menu */
 .menu-cards-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
     margin-block: 3rem;
 }
 
@@ -481,9 +486,14 @@ nav ul {
     border-radius: 1rem;
 }
 
-#reservas h1 {
-    margin-bottom: 3rem;
-    text-align: center;
+#reservas .flex-wrap {
+    gap: 1.5rem;
+}
+
+#reservas .flex-wrap-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 
@@ -499,9 +509,9 @@ nav ul {
     border-radius: 1rem;
 }
 
-#evoucher h1 {
-    margin-bottom: 3rem;
-    text-align: center;
+#evoucher-dest input {
+    margin-top: 0;
+    width: auto;
 }
 
 .btn-quantia {
@@ -519,20 +529,16 @@ nav ul {
 footer {
     background-color: var(--primary-clr-800);
     color: var(--text-color);
-    padding: 1.5rem;
+    padding-block: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.footer-social-media {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+#footer-social-media {
     gap: 3rem;
 }
 
@@ -581,13 +587,14 @@ footer {
     transform: translateY(-10px)
 }
 
-.footer-inline-tabs {
+#footer-inline-tabs {
     width: 100%;
-    display: flex;
     justify-content: space-evenly;
+    padding: 0;
 }
 
-.foooter-author-rights {
+#footer-author-rights {
     opacity: 0.75;
     font-style: italic;
+    padding: 0;
 }

@@ -52,43 +52,45 @@
                         <span class="text-colored">*</span>
                     </label>
                     <input type="text" name="nome" id="nome" placeholder="John Doe" required autofocus />
+                </div>
+                <div class="input-field">
                     <label for="telefone">
                         Telefone
                     </label>
                     <input type="tel" name="telefone" id="telefone" placeholder="+351 987 654 321" required />
+                </div>
+                <div class="input-field">
                     <label for="email">
                         E-mail
                         <span class="text-colored">*</span>
                     </label>
                     <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
-                    <label for="oferta">
+                </div>
+                <div class="input-field flex-wrap" id="evoucher-dest">
+                    <div class="flex-wrap-child">
                         <input type="checkbox" id="oferta1" name="oferta1">
-                        <label for="oferta1">Para mim</label><br>
+                        <label for="oferta1">Para mim</label>
+                    </div>
+                    <div class="flex-wrap-child">
                         <input type="checkbox" id="oferta2" name="oferta2">
-                        <label for="oferta2">Para oferecer</label><br>
-                    </label>
-                    <label for="nome-dest">
-                        Nome do destinatário
-                        <span class="text-colored">*</span>
-                    </label>
-                    <input type="text" name="nome-dest" id="nome-dest" placeholder="John Doe" required />
+                        <label for="oferta2">Para oferecer</label>
+                    </div>
                 </div>
-                <div>
-                    <label for="quantia">
-                        Quantia
-                    </label>
-                    <button type="radio" id="10euros" name="quantia" class="btn-quantia rounded">10€</button>
-                    <button type="radio" id="20euros" name="quantia" class="btn-quantia rounded">20€</button>
-                    <button type="radio" id="30euros" name="quantia" class="btn-quantia rounded">30€</button>
-                    <button type="radio" id="40euros" name="quantia" class="btn-quantia rounded">40€</button>
-                    <button type="radio" id="50euros" name="quantia" class="btn-quantia rounded">50€</button>
-                    <button type="radio" id="60euros" name="quantia" class="btn-quantia rounded">60€</button>
-                    <button type="radio" id="80euros" name="quantia" class="btn-quantia rounded">80€</button>
-                    <button type="radio" id="100euros" name="quantia" class="btn-quantia rounded">100€</button>
-                    <button type="radio" id="150euros" name="quantia" class="btn-quantia rounded">150€</button>
-                    <button type="radio" id="200euros" name="quantia" class="btn-quantia rounded">200€</button>
+                <div class="input-field">
+                    <div id="voucher-wrapper">
+                        <button type="radio" id="10euros" name="quantia" class="btn-quantia rounded">10€</button>
+                        <button type="radio" id="20euros" name="quantia" class="btn-quantia rounded">20€</button>
+                        <button type="radio" id="30euros" name="quantia" class="btn-quantia rounded">30€</button>
+                        <button type="radio" id="40euros" name="quantia" class="btn-quantia rounded">40€</button>
+                        <button type="radio" id="50euros" name="quantia" class="btn-quantia rounded">50€</button>
+                        <button type="radio" id="60euros" name="quantia" class="btn-quantia rounded">60€</button>
+                        <button type="radio" id="80euros" name="quantia" class="btn-quantia rounded">80€</button>
+                        <button type="radio" id="100euros" name="quantia" class="btn-quantia rounded">100€</button>
+                        <button type="radio" id="150euros" name="quantia" class="btn-quantia rounded">150€</button>
+                        <button type="radio" id="200euros" name="quantia" class="btn-quantia rounded">200€</button>
+                    </div>
                 </div>
-                <div class="form-creat">
+                <div class="form-create">
                     <button type="reset" class="btn rounded sombra">Limpar</button>
                     <button type="submit" class="btn rounded sombra">Criar e-voucher</button>
                 </div>
@@ -98,25 +100,23 @@
     </main>
 
     <footer>
-        <div class="footer-info container">
+        <div id="contactos" class="footer-info">
             <div class="footer-name">name</div>
             <div class="footer-email">email@email.com</div>
             <div class="footer-phone-number">+351 000 000 000</div>
         </div>
 
-        <div class="footer-inline-tabs container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html/#sobrenos">Sobre Nós</a></li>
-                <li><a href="index.html/#restaurantes">Restaurantes</a></li>
-                <li><a href="index.html/#menu">Menu</a></li>
-                <li><a href="reserva.html">Reservas</a></li>
-                <li><a href="evoucher.html">e-Voucher</a></li>
-                <li><a href="index.html/#contactos">Contactos</a></li>
-            </ul>
+        <div id="footer-inline-tabs" class="container flex-wrap">
+            <a href="index.html#welcome">Home</a>
+            <a href="index.html#sobrenos">Sobre Nós</a>
+            <a href="index.html#restaurantes">Restaurantes</a>
+            <a href="index.html#menu">Menu</a>
+            <a href="reserva.html">Reservas</a>
+            <a href="evoucher.html">e-Voucher</a>
+            <a href="index.html#contactos">Contactos</a>
         </div>
 
-        <div class="footer-social-media container">
+        <div id="footer-social-media" class="flex-wrap">
             <a class="social-media sombra">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
@@ -130,7 +130,9 @@
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
         </div>
-        <div class="foooter-author-rights container">&copy; 2023 VICENZO Rita Vieira & Rodrigo Coelho </div>
+        <div id="footer-author-rights" class="container">
+            &copy; 2023 VICENZO Rita Vieira & Rodrigo Coelho
+        </div>
     </footer>
 </body>
 

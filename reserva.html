@@ -51,6 +51,7 @@
                         Restaurante
                         <span class="text-colored">*</span>
                     </label>
+                    <br>
                     <select class="option-rest" name="restaurant">
                         <option value="1">Lorem.</option>
                         <option value="2">Lorem.</option>
@@ -58,52 +59,55 @@
                         <option value="4">Lorem.</option>
                     </select>
                 </div>
-                <!-- <div class="input-grid"> -->
-                <div class="input-field">
-                    <div id="linha">
-                        <label for="nome">
-                            Nome Completo
-                            <span class="text-colored">*</span>
-                        </label>
-                        <input type="text" name="nome" id="nome" placeholder="John Doe" required autofocus />
+                <div class="flex-wrap">
+                    <!-- Esquerda -->
+                    <div class="flex-wrap-child">
+                        <div class="input-field">
+                            <label for="nome">
+                                Nome Completo
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="text" name="nome" id="nome" placeholder="John Doe" required autofocus />
+                        </div>
+                        <div class="input-field">
+                            <label for="email">
+                                E-mail
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="telemovel">
+                                Telemóvel
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="tel" name="telemovel" id="telemovel" placeholder="+351 987 654 321" required />
+                        </div>
                     </div>
-                    <div class="input-field">
-                        <label for="data">
-                            Data
-                            <span class="text-colored">*</span>
-                        </label>
-                        <input type="date" name="data" id="data" required />
+                    <!-- Direita -->
+                    <div class="flex-wrap-child">
+                        <div class="input-field">
+                            <label for="data">
+                                Data
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="date" name="data" id="data" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="hora">
+                                Hora
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="time" name="hora" id="hora" required />
+                        </div>
+                        <div class="input-field">
+                            <label for="pessoas">
+                                Pessoa(s)
+                                <span class="text-colored">*</span>
+                            </label>
+                            <input type="number" name="pessoas" id="pessoas" placeholder="1" min="1" max="10" required />
+                        </div>
                     </div>
-
-                </div>
-                <div class="input-field">
-                    <label for="email">
-                        E-mail
-                        <span class="text-colored">*</span>
-                    </label>
-                    <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
-                </div>
-                <div class="input-field">
-                    <label for="hora">
-                        Hora
-                        <span class="text-colored">*</span>
-                    </label>
-                    <input type="time" name="hora" id="hora" required />
-                </div>
-                <div class="input-field">
-                    <label for="telefone">
-                        Telefone
-                        <span class="text-colored">*</span>
-                    </label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="+351 987 654 321" required />
-                </div>
-                <div class="input-field">
-                    <label for="pessoas">
-                        Pessoa(s)
-                        <span class="text-colored">*</span>
-                    </label>
-                    <input type="number" name="pessoas" id="pessoas" placeholder="1" min="1" max="10" required />
-                </div>
                 </div>
                 <div class="input-field">
                     <label for="observacoes">Observações</label>
@@ -118,25 +122,23 @@
     </main>
 
     <footer>
-        <div class="footer-info container">
+        <div id="contactos" class="footer-info">
             <div class="footer-name">name</div>
             <div class="footer-email">email@email.com</div>
             <div class="footer-phone-number">+351 000 000 000</div>
         </div>
 
-        <div class="footer-inline-tabs container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html/#sobrenos">Sobre Nós</a></li>
-                <li><a href="index.html/#restaurantes">Restaurantes</a></li>
-                <li><a href="index.html/#menu">Menu</a></li>
-                <li><a href="reserva.html">Reservas</a></li>
-                <li><a href="evoucher.html">e-Voucher</a></li>
-                <li><a href="index.html/#contactos">Contactos</a></li>
-            </ul>
+        <div id="footer-inline-tabs" class="container flex-wrap">
+            <a href="index.html#welcome">Home</a>
+            <a href="index.html#sobrenos">Sobre Nós</a>
+            <a href="index.html#restaurantes">Restaurantes</a>
+            <a href="index.html#menu">Menu</a>
+            <a href="reserva.html">Reservas</a>
+            <a href="evoucher.html">e-Voucher</a>
+            <a href="index.html#contactos">Contactos</a>
         </div>
 
-        <div class="footer-social-media container">
+        <div id="footer-social-media" class="flex-wrap">
             <a class="social-media sombra">
                 <i class="fa-brands fa-facebook-f"></i>
             </a>
@@ -150,7 +152,9 @@
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
         </div>
-        <div class="foooter-author-rights container">&copy; 2023 VICENZO Rita Vieira & Rodrigo Coelho </div>
+        <div id="footer-author-rights" class="container">
+            &copy; 2023 VICENZO Rita Vieira & Rodrigo Coelho
+        </div>
     </footer>
 </body>
 
