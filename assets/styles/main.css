@@ -291,7 +291,7 @@ nav ul {
 /* sobre nos */
 #sobrenos {
     background-color: var(--primary-clr-900);
-    text-color: var(--text-color);
+    color: var(--text-color);
 }
 
 /* restaurantes */
