@@ -1,5 +1,5 @@
 function openPDF() {
-    window.open('./assets/docs/menu.pdf', '_blank');
+    window.open('./assets/Menu.pdf', '_blank');
 }
 
 function addClickEventToRestaurante() {
