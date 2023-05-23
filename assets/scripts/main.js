@@ -14,9 +14,11 @@ function addClickEventToRestaurante() {
             
             // Change the opacity of the restaurante-info to 1
             restauranteInfo.style.opacity = '1';
-
+            // restaurantes[i].style.filter = 'saturate(1)';
+            
             setTimeout(() => {
                 restauranteInfo.style.opacity = '0';
+                // restaurantes[i].style.filter = 'saturate(0)';
             }, 5000);
         });
     }
