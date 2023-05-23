@@ -21,6 +21,53 @@ function addClickEventToRestaurante() {
         });
     }
 }
-  
-  // Call the function to add click event to restaurantes
-  addClickEventToRestaurante();
+
+/// Call the function to add click event to restaurantes
+addClickEventToRestaurante();
+
+// Função para renderizar os vouchers
+function renderVouchers() {
+    // Valores dos vouchers
+    let values = [ 10, 20, 30, 40, 50, 60, 80, 100, 150, 200 ];
+
+    // Buscar o container dos vouchers
+    let container = document.getElementById('voucher-wrapper');
+
+    for(let i = 0; i < values.length; i++) {
+        let newRadio = document.createElement('input');
+        newRadio.setAttribute('type', 'radio');
+        newRadio.setAttribute('name', 'voucher');
+        newRadio.setAttribute('class', 'voucher-radio-input')
+        newRadio.setAttribute('id', `voucher-${values[i]}`);
+
+        // Adiciona o radio button ao container
+        container.appendChild(newRadio);
+
+        // Criar a label para cada radio
+        let newLabel = document.createElement('label');
+        newLabel.setAttribute('for', `voucher-${values[i]}`);
+        newLabel.setAttribute('class', 'voucher-radio-label rounded');
+        newLabel.innerText = `${values[i]}€`;
+
+        // Adiciona a label ao container
+        container.appendChild(newLabel);
+    }
+}
+
+// Função para trocar a visibilidade do destinatário
+// e adicionar o atributo required ao input
+function controllerVoucherDest() {
+    // Buscar a checkbox
+    let input = document.getElementById('oferta');
+    // Buscar o nome do destinatário + div
+    let dest = document.getElementById('nome_dest');
+    let dest_div = document.getElementById('nome_dest_div');
+
+    if(input.checked) {
+        dest_div.classList.remove('hidden');
+        dest.removeAttribute('required');
+    } else {
+        dest_div.classList.add('hidden');
+        dest.setAttribute('required', 'true');
+    }
+}

@@ -26,7 +26,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body onload="renderVouchers();">
     <nav>
         <a class="logo" href="index.html#welcome">
             Vicenzo
@@ -67,28 +67,22 @@
                     <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
                 </div>
                 <div class="input-field flex-wrap" id="evoucher-dest">
-                    <div class="flex-wrap-child">
-                        <input type="checkbox" id="oferta1" name="oferta1">
+                    <!-- <div class="flex-wrap-child">
+                        <input type="checkbox" id="oferta1" name="oferta">
                         <label for="oferta1">Para mim</label>
-                    </div>
+                    </div> -->
                     <div class="flex-wrap-child">
-                        <input type="checkbox" id="oferta2" name="oferta2">
-                        <label for="oferta2">Para oferecer</label>
+                        <input type="checkbox" id="oferta" name="oferta" onchange="controllerVoucherDest()">
+                        <label for="oferta2">Para oferta</label>
                     </div>
                 </div>
+                <!-- Secção dos Radios para os Vouchers -->
                 <div class="input-field">
-                    <div id="voucher-wrapper">
-                        <button type="radio" id="10euros" name="quantia" class="btn-quantia rounded">10€</button>
-                        <button type="radio" id="20euros" name="quantia" class="btn-quantia rounded">20€</button>
-                        <button type="radio" id="30euros" name="quantia" class="btn-quantia rounded">30€</button>
-                        <button type="radio" id="40euros" name="quantia" class="btn-quantia rounded">40€</button>
-                        <button type="radio" id="50euros" name="quantia" class="btn-quantia rounded">50€</button>
-                        <button type="radio" id="60euros" name="quantia" class="btn-quantia rounded">60€</button>
-                        <button type="radio" id="80euros" name="quantia" class="btn-quantia rounded">80€</button>
-                        <button type="radio" id="100euros" name="quantia" class="btn-quantia rounded">100€</button>
-                        <button type="radio" id="150euros" name="quantia" class="btn-quantia rounded">150€</button>
-                        <button type="radio" id="200euros" name="quantia" class="btn-quantia rounded">200€</button>
-                    </div>
+                    <div id="voucher-wrapper" class="flex-wrap"></div>
+                </div>
+                <div class="input-field hidden" id="nome_dest_div">
+                    <label for="nome_dest">Destinatário</label>
+                    <input type="text" name="nome_dest" id="nome_dest" placeholder="John Doe">
                 </div>
                 <div class="form-create">
                     <button type="reset" class="btn rounded sombra">Limpar</button>
@@ -134,6 +128,8 @@
             &copy; 2023 VICENZO Rita Vieira & Rodrigo Coelho
         </div>
     </footer>
+
+    <script src="./assets/scripts/main.js"></script>
 </body>
 
 </html>
