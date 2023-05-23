@@ -6,7 +6,7 @@
 /* Variáveis CSS */
 :root {
     /* Cores Principais */
-    --primary-clr-900: rgb(20, 20, 20);
+    --primary-clr-900: rgb(1, 1, 1);
     --primary-clr-800: rgb(30, 30, 30);
     --accent-clr-900: rgb(225, 225, 0);
     --accent-clr-800: rgb(238, 200, 0);
@@ -245,6 +245,16 @@ section h1 {
     justify-content: flex-end;
     align-items: center;
     gap: 1rem;
+}
+
+/* Scroll to Top */
+#scroll-to-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--primary-clr-900);
+    padding: 1rem;
+    border-radius: 100vmax;
 }
 
 /* Primeira secção */
