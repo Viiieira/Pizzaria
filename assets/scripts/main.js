@@ -71,3 +71,10 @@ function controllerVoucherDest() {
         dest.removeAttribute('required');
     }
 }
+
+// Função para validar o Formulário
+function validateForm() {
+    let radios = document.querySelectorAll('.voucher-radio-input');
+    console.log(radios);
+    return;
+}
