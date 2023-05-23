@@ -65,9 +65,9 @@ function controllerVoucherDest() {
 
     if(input.checked) {
         dest_div.classList.remove('hidden');
-        dest.removeAttribute('required');
+        dest.setAttribute('required', '');
     } else {
         dest_div.classList.add('hidden');
-        dest.setAttribute('required', 'true');
+        dest.removeAttribute('required');
     }
 }
