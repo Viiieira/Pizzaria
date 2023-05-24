@@ -1,5 +1,5 @@
 function openPDF() {
-    window.open('./assets/Menu.pdf', '_blank');
+    window.open('./assets/VICENZOmenu.pdf', '_blank');
 }
 
 function addClickEventToRestaurante() {
@@ -19,7 +19,7 @@ function addClickEventToRestaurante() {
             setTimeout(() => {
                 restauranteInfo.style.opacity = '0';
                 // restaurantes[i].style.filter = 'saturate(0)';
-            }, 5000);
+            }, 10000);
         });
     }
 }
@@ -30,7 +30,7 @@ addClickEventToRestaurante();
 // Função para renderizar os vouchers
 function renderVouchers() {
     // Valores dos vouchers
-    let values = [ 10, 20, 30, 40, 50, 60, 80, 100, 150, 200 ];
+    let values = [ 15, 20, 30, 40, 50, 60, 80, 100, 150, 200 ];
 
     // Buscar o container dos vouchers
     let container = document.getElementById('voucher-wrapper');

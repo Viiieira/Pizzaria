@@ -111,16 +111,16 @@ section h1 {
 .rounded {border-radius: 1rem}
 
 .container {
-    max-width: 75%;
+    max-width: 85%;
     margin-inline: auto;
     padding: 2rem;
     border-radius: 1rem;
 }
 
 /* Ajustar a largura máxima do container, para melhor visualização em ecrãs pequenos */
-@media (max-width: 425px) {
+@media (max-width: 600px) {
     .container {
-        max-width: 100%;
+        max-width: 95%;
         padding: 2rem 0rem;
         border-radius: 0rem !important;
     }
@@ -222,7 +222,7 @@ nav ul {
             rgba(56, 56, 56, 0.25) 0%,
             rgba(56, 56, 56, 0.5) 80%,
             rgba(0, 0, 0, 1) 100%),
-        url("../IMG/fundos/fundos2.jpg");
+        url("../IMG/fundos/fundo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -247,6 +247,11 @@ nav ul {
 #sobrenos {
     background-color: var(--primary-clr-900);
     color: var(--text-color);
+}
+
+.sobrenos-content p{
+    width: 50%;
+    text-align: justify;
 }
 
 /* Restaurantes */
@@ -275,10 +280,10 @@ nav ul {
     position: relative;
 }
 
-.restaurante:first-child {background-image: url("../IMG/restaurantes/restaurante1.avif")}
-.restaurante:nth-child(2) {background-image: url("../IMG/restaurantes/restaurante2.jpg")}
-.restaurante:nth-child(3) {background-image: url("../IMG/restaurantes/restaurante3.jpg")}
-.restaurante:last-child {background-image: url("../IMG/restaurantes/restaurante4.jpg")}
+.restaurante:first-child {background-image: url("../IMG/restaurantes/vicenzo.jpg")}
+.restaurante:nth-child(2) {background-image: url("../IMG/restaurantes/salento.jpg")}
+.restaurante:nth-child(3) {background-image: url("../IMG/restaurantes/treviso.jpg")}
+.restaurante:last-child {background-image: url("../IMG/restaurantes/bellagio.jpg")}
 
 .restaurante:hover {
     filter: saturate(1);
@@ -308,13 +313,14 @@ nav ul {
 .restaurante-info-line {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     font-weight: 500;
 }
 
 .restaurante-info-line i {font-size: 1.25rem}
 
 .restaurante-info-line p {
+    width: 100%;
     text-align: center;
     min-width: 300px;
 }
@@ -330,31 +336,27 @@ nav ul {
 
 .menu-card {
     padding: 1rem;
-    width: 180px;
+    width: 220px;
     height: 500px;
     object-fit: cover;
     filter: saturate(1);
     background-position: center center;
 }
 
-.menu-card:first-child {background-image: url('../IMG/menu/entradas1.webp')}
+.menu-card:first-child {background-image: url('../IMG/menu/entradas.jpg')}
 
-.menu-card:nth-child(2) {background-image: url('../IMG/menu/massas1.avif')}
+.menu-card:nth-child(2) {background-image: url('../IMG/menu/massas.jpg')}
 
-.menu-card:nth-child(3) {background-image: url('../IMG/menu/pizzas1.webp')}
+.menu-card:nth-child(3) {background-image: url('../IMG/menu/pizzas.jpg')}
 
-.menu-card:last-child {background-image: url('../IMG/menu/sobremesas1.jpg')}
+.menu-card:last-child {background-image: url('../IMG/menu/sobremesas.jpg')}
 
 .menu-card p {opacity: 0}
 
 .menu-card:hover {
-    background-image: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.25) 0%,
-        rgba(0, 0, 0, 0.05) 100%,
-        url(''));
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%, url(''));
     transform: scale(1.05);
-    filter: saturate(0);
+    filter: saturate(1);
     transition:
         filter 0.25s ease-in-out,
         background-image 0.25s ease-in-out,
@@ -362,6 +364,8 @@ nav ul {
 }
 
 .menu-card:hover p {
+    color: var(--primary-clr-800);
+    font-weight: 600;
     opacity: 1;
     transition: opacity 0.25s ease-in-out;
     font-size: 1.75rem;
