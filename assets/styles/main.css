@@ -7,10 +7,10 @@
 /* Variáveis CSS */
 :root {
     /* Cores Principais */
-    --primary-clr-900: rgb(1, 1, 1);
-    --primary-clr-800: rgb(10, 10, 10);
-    --accent-clr-900: rgb(225, 225, 0);
-    --accent-clr-800: rgb(238, 200, 0);
+    --primary-clr-900: rgb(0, 0, 0);
+    --primary-clr-800: rgb(17, 17, 17);
+    --accent-clr-900: rgb(234, 195, 90);
+    --accent-clr-800: rgb(243, 187, 58);
 
     /* Cores Textos e Títulos */
     --title-color: #ffffff;
@@ -108,7 +108,7 @@ section h1 {
 /* TODO: ARRANJAR CLASSE PARA A SOMBRA */
 .sombra {box-shadow: 0 10px 50px rgba(0, 0, 0, 0.75)}
 
-.rounded {border-radius: 1rem}
+.rounded {border-radius: .5rem}
 
 .container {
     max-width: 85%;
@@ -401,6 +401,7 @@ nav ul {
 .btn-download:hover, .btn-download:focus {
     background-color: var(--accent-clr-800);
     color: var(--primary-clr-800);
+    border-color: var(--primary-clr-800);
 }
 
 /* Reservas */
