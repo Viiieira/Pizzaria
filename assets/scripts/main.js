@@ -89,3 +89,17 @@ function validateForm() {
     console.log(radios);
     return;
 }
+
+// Função para verificar os campos
+function reservar() {
+    var nome = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var tel = document.getElementById("telemovel").value;
+    var data = document.getElementById("data").value;
+    var hora = document.getElementById("hora").value;
+    var pessoas = document.getElementById("pessoas").value;
+
+    if (nome == "" || email == "" || tel == "" || data == "" || hora == "" || pessoas == "") {
+        document.getElementById("aviso").innerHTML = "Existem campos vazios!";
+    }
+}
