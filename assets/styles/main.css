@@ -226,12 +226,11 @@ nav ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: saturate(0.5);
     display: grid;
-    place-items: center;/* !!!!!!!!!!!!!!! */
+    place-items: center;
 }
 
-#welcome-img {min-width: 300px; filter: saturate(1)}
+#welcome-img {min-width: 300px}
 
 /* Logo */
 .logo {
@@ -313,11 +312,15 @@ nav ul {
 .restaurante-info-line {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .1rem;
     font-weight: 500;
 }
 
-.restaurante-info-line i {font-size: 1.25rem}
+.restaurante-info-line i {font-size: 1rem}
+
+.restaurante-titulo {font-size: 1.5rem}
+
+.restaurante-cord {font-size: .9rem}
 
 .restaurante-info-line p {
     width: 100%;

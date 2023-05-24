@@ -30,7 +30,7 @@ addClickEventToRestaurante();
 // Função para renderizar os vouchers
 function renderVouchers() {
     // Valores dos vouchers
-    let values = [ 15, 20, 30, 40, 50, 60, 80, 100, 150, 200 ];
+    let values = [50, 75, 100, 125, 150, 200, 300];
 
     // Buscar o container dos vouchers
     let container = document.getElementById('voucher-wrapper');
@@ -64,13 +64,22 @@ function controllerVoucherDest() {
     // Buscar o nome do destinatário + div
     let dest = document.getElementById('nome_dest');
     let dest_div = document.getElementById('nome_dest_div');
-
+    
     if(input.checked) {
         dest_div.classList.remove('hidden');
         dest.setAttribute('required', '');
     } else {
         dest_div.classList.add('hidden');
         dest.removeAttribute('required');
+    }
+    
+    // Buscar a mensagem para o destinatário + div
+    let msgdest_div = document.getElementById('msg_dest_div');
+
+    if(input.checked) {
+        msgdest_div.classList.remove('hidden');
+    } else {
+        msgdest_div.classList.add('hidden');
     }
 }
 

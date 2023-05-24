@@ -54,23 +54,19 @@
                     <input type="text" name="nome" id="nome" placeholder="John Doe" required autofocus />
                 </div>
                 <div class="input-field">
-                    <label for="telefone">
-                        Telefone
-                    </label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="+351 987 654 321" required />
-                </div>
-                <div class="input-field">
                     <label for="email">
                         E-mail
                         <span class="text-colored">*</span>
                     </label>
                     <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
                 </div>
+                <div class="input-field">
+                    <label for="telefone">
+                        Telefone
+                    </label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="+351 987 654 321"/>
+                </div>
                 <div class="input-field flex-wrap" id="evoucher-dest">
-                    <!-- <div class="flex-wrap-child">
-                        <input type="checkbox" id="oferta1" name="oferta">
-                        <label for="oferta1">Para mim</label>
-                    </div> -->
                     <div class="flex-wrap-child">
                         <input type="checkbox" id="oferta" name="oferta" onchange="controllerVoucherDest()">
                         <label for="oferta2">Para oferta</label>
@@ -81,8 +77,15 @@
                     <div id="voucher-wrapper" class="flex-wrap"></div>
                 </div>
                 <div class="input-field hidden" id="nome_dest_div">
-                    <label for="nome_dest">Destinatário</label>
+                    <label for="nome_dest">
+                        Destinatário
+                        <span class="text-colored">*</span>
+                    </label>
                     <input type="text" name="nome_dest" id="nome_dest" placeholder="John Doe">
+                </div>
+                <div class="input-field hidden" id="msg_dest_div">
+                    <label for="msg_dest">Mensagem</label>
+                    <textarea name="msg_dest" id="msg_dest" rows="5" placeholder="Escreva aqui uma mensagem para quem vai ofercer o e-Voucher"></textarea>
                 </div>
                 <div class="form-submit">
                     <button type="reset" class="btn rounded sombra">Limpar</button>
