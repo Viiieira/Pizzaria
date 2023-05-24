@@ -91,15 +91,85 @@ function validateForm() {
 }
 
 // Função para verificar os campos
-function reservar() {
-    var nome = document.getElementById("nome").value;
-    var email = document.getElementById("email").value;
-    var tel = document.getElementById("telemovel").value;
-    var data = document.getElementById("data").value;
-    var hora = document.getElementById("hora").value;
-    var pessoas = document.getElementById("pessoas").value;
+// function reservar() {
+//     var nome = document.getElementById("nome").value;
+//     var email = document.getElementById("email").value;
+//     var tel = document.getElementById("telemovel").value;
+//     var data = document.getElementById("data").value;
+//     var hora = document.getElementById("hora").value;
+//     var pessoas = document.getElementById("pessoas").value;
 
-    if (nome == "" || email == "" || tel == "" || data == "" || hora == "" || pessoas == "") {
-        document.getElementById("aviso").innerHTML = "Existem campos vazios!";
+//     if (nome == "" || email == "" || tel == "" || data == "" || hora == "" || pessoas == "") {
+//         document.getElementById("aviso").innerHTML = "Existem campos vazios!";
+//     }
+// }
+
+// Receber o elemento do formulário
+const reservasForm = document.getElementById('reservas-form');
+
+// EventListener para o form quando é submetido
+reservasForm.addEventListener('submit', function(event) {
+    // Prevenir o formulário de ser submetido antes de ser validado
+    event.preventDefault();
+
+    // Buscar elementos a serem validados
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let tel = document.getElementById("telemovel").value;
+    let data = document.getElementById("data").value;
+    let hora = document.getElementById("hora").value;
+    let pessoas = document.getElementById("pessoas").value;
+
+    // Validar nome
+    if(nome.trim() == "") {
+        displayError("O campo \"Nome Completo\" não pode estar vazio");
+    } else {
+        hideError();
+    }
+
+    // Validar email
+    if(nome.trim() == "") {
+        displayError("O campo \"Nome Completo\" não pode estar vazio");
+    } else {
+        hideError();
+    }
+
+    // Validar tel
+    // Validar data
+    // Validar hora
+    // Validar pessoas
+});
+
+// Função para renderizar o erro
+function displayError(errorMessage) {
+    // Buscar o elemento para mostrar o erro
+    let errorElement = document.getElementById('aviso');
+    if(errorElement.innerText.length == 0) {
+        errorElement.innerText += errorMessage;
+    } else {
+        errorElement.innerText += ", " + errorMessage;
+    }
+}
+
+// Função para esconder o erro
+function hideError() {
+    let errorElement = document.getElementById('aviso');
+    errorElement.innerText = "";
+}
+
+// Função para renderizar as opções de horas e minutos para as opções
+function renderReservationHoursMinutes() {
+    let select = document.getElementById('hora');
+
+    for(let i = 11; i <= 22; i++) {
+        if((11 <= i && i <= 14) || (19 <= i && i <= 22)) {
+            for(let j = 0; j <= 30; j += 30) {
+                let newOption = document.createElement('option');
+                newOption.setAttribute('value', `${i}:${j == 0 ? '00' : j}`);
+                newOption.innerText = `${i}:${j == 0 ? '00' : j}`;
+    
+                select.appendChild(newOption);
+            }
+        }
     }
 }

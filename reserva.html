@@ -26,7 +26,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body onload="renderReservationHoursMinutes()">
     <nav>
         <a class="logo" href="index.html#welcome">
             VICENZO
@@ -45,7 +45,7 @@
     <main class="container">
         <section id="reservas">
             <h1>Reservas</h1>
-            <form action="index.html" autocomplete="off" method="post">
+            <form action="index.html" autocomplete="off" method="post" id="reserva-form">
                 <div class="input-field">
                     <label for="restaurante">
                         Restaurante
@@ -98,7 +98,9 @@
                                 Hora
                                 <span class="text-colored">*</span>
                             </label>
-                            <input type="time" name="hora" id="hora" required />
+                            <select name="hora" id="hora">
+                                <option value="" selected disabled>---- Reserva ----</option>
+                            </select>
                         </div>
                         <div class="input-field">
                             <label for="pessoas">
@@ -157,6 +159,8 @@
             &copy; 2023 VICENZO Rita Vieira & Rodrigo Coelho
         </div>
     </footer>
+
+    <script src="./assets/scripts/main.js"></script>
 </body>
 
 </html>

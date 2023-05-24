@@ -177,6 +177,11 @@ section h1 {
     gap: 1rem;
 }
 
+#aviso {
+    color: red;
+    font-style: italic;
+}
+
 /* Scroll to Top */
 #scroll-to-top {
     position: fixed;
@@ -253,6 +258,11 @@ nav ul {
     text-align: justify;
 }
 
+#sobrenos p { text-align: justify; }
+#sobrenos img { max-width: 500px; }
+#sobrenos :last-child { margin: 0 auto; }
+#sobrenos .flex-wrap { align-items: center; justify-content: center; gap: 2rem; }
+
 /* Restaurantes */
 #restaurantes-wrapper {
     display: grid;
@@ -307,6 +317,7 @@ nav ul {
         180deg,
         rgba(3, 3, 3, 0.75) 75%,
         rgba(36, 36, 36, 0.75) 100%);
+    padding-inline: .5rem;
 }
 
 .restaurante-info-line {
