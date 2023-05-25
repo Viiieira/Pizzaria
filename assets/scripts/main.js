@@ -128,16 +128,39 @@ reservasForm.addEventListener('submit', function(event) {
     }
 
     // Validar email
-    if(nome.trim() == "") {
-        displayError("O campo \"Nome Completo\" não pode estar vazio");
+    if(email.trim() == "") {
+        displayError("O campo \"Email\" não pode estar vazio");
     } else {
         hideError();
     }
 
     // Validar tel
+    if(tel.trim() == "") {
+        displayError("O campo \"Telemóvel\" não pode estar vazio");
+    } else {
+        hideError();
+    }
+
     // Validar data
+    if(data.trim() == "") {
+        displayError("O campo \"Data\" não pode estar vazio");
+    } else {
+        hideError();
+    }
+
     // Validar hora
+    if(hora.trim() == "") {
+        displayError("O campo \"Hora\" não pode estar vazio");
+    } else {
+        hideError();
+    }
+
     // Validar pessoas
+    if(pessoas.trim() == "") {
+        displayError("O campo \"Pessoa(s)\" não pode estar vazio");
+    } else {
+        hideError();
+    }
 });
 
 // Função para renderizar o erro
@@ -158,7 +181,7 @@ function hideError() {
 }
 
 // Função para renderizar as opções de horas e minutos para as opções
-function renderReservationHoursMinutes() {
+function reservationTime() {
     let select = document.getElementById('hora');
 
     for(let i = 11; i <= 22; i++) {

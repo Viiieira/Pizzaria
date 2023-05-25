@@ -131,7 +131,7 @@ section h1 {
 .text-colored {color: var(--accent-clr-900)}
 
 .btn {
-    background-color: var(--accent-clr-900);
+    background-color: var(--accent-clr-800);
     color: var(--primary-clr-900);
     border: 3px solid transparent;
     font-weight: 500;
@@ -141,8 +141,8 @@ section h1 {
 }
 
 .btn:hover, .btn:focus {
-    border-color: var(--primary-clr-800);
-    background-color: var(--accent-clr-800);
+    border-color: var(--primary-clr-900);
+    background-color: var(--accent-clr-900);
 }
 
 .flex-wrap {
@@ -183,14 +183,14 @@ section h1 {
 }
 
 /* Scroll to Top */
-#scroll-to-top {
+/* #scroll-to-top {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     background-color: var(--primary-clr-900);
     padding: 1rem;
     border-radius: 100vmax;
-}
+} */
 /* Classes Utilitárias fim */
 
 /* Barra de navegação */
@@ -241,7 +241,6 @@ nav ul {
 .logo {
     font-weight: 400;
     font-size: 2rem;
-    font-style: italic;
     cursor: pointer;
 }
 
